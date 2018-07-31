@@ -1,5 +1,5 @@
-#ifndef String_class
-#define String_class
+#ifndef _STRING_CLASS_
+#define _STRING_CLASS_
 #include<iostream>
 using namespace std;
 
