@@ -96,9 +96,9 @@ void test_cpp1()
 }
 ```
 ## const和define区别
-1.define和const变量在编译的阶段不一样，define是预处理，const是编译器
-2.const是编译器处理，完全符合编译器的逻辑判断和词法分析，define没有区域划分
-3.预处理：简单的代码展开；编译器：语法校验，词法分析校验
+1. define和const变量在编译的阶段不一样，define是预处理，const是编译器
+2. const是编译器处理，完全符合编译器的逻辑判断和词法分析，define没有区域划分
+3. 预处理：简单的代码展开；编译器：语法校验，词法分析校验
 ```
 void test2()
 {
