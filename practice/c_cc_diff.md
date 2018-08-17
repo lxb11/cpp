@@ -1,3 +1,17 @@
+## 变量实用增强
+```
+//gcc编译不报错，g++编译报错
+#include<iostreaam>
+
+int g_var;
+int g_var = 1;
+
+int main()
+{
+    
+}
+```
+
 ## struct
 ```
 struct student{
