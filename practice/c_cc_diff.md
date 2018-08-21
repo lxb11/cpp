@@ -158,6 +158,34 @@ void test_cpp4()
 
 }
 ```
+## cpp可以有默认参数
+```
+int func1(int x = 100)
+{
+    cout << "func: x = " << x << endl;
+    return 0;
+}
 
+//默认参数，必须是从右向左设置，只有一个默认参数时，必须放到最右边
+int volume(int width, int len = 40, int hight = 10)
+{
+    return width * len * hight;
+}
+
+//占位符
+int func1(int a, int)
+{
+    return a;
+}
+
+int mian(void)
+{
+    int x = 10;
+
+    func();
+    func(x);
+}
+
+```
 
 
