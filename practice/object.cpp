@@ -76,13 +76,6 @@ int main()
     c1.setR(10.0);
     cout << "c1的半径" << c1.getR();
 
-
-
-
-
-
-
-
     return 0;
 }
 
