@@ -45,10 +45,18 @@ public:
         cout << "析构函数" << endl;
     }
 
+    //等号操作符
+    void operator = (const Test &t)
+    {
+        m_x = t.m_x;
+        m_y = t.m_y;
+    }
+
     void printT()
     {
         cout << "x = " << m_x << endl << "y = " << m_y << endl;
     }
+
 private:
 
     int m_x;
@@ -74,6 +82,10 @@ int main()
     Test t3(10);
 
     Test t4 = t3;//调用的是拷贝构造函数
+
+    t1 = t;//调用的是等号操作符
+    
+    func(t2);//会调用局部变量t的拷贝构造函数
 
     return 0;
 }
