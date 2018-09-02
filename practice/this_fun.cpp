@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//全局函数和成员函数
 class Test
 {
 public:
