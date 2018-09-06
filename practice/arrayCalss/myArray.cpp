@@ -71,6 +71,74 @@ myArray::~myArray()
        }
 }
 
+int& myArray::operator[](int index) const
+{
+    return this->space[index];
+}
 
+myArray& myArray::operator=(const myArray& another)
+{
+    if(this->space != NULL ||this->length != 0)
+    {
+        delete []this->space;
+        this->space = NULL;
+        this->length = 0;
+    }
+
+    //进行深拷贝
+    if(another.length > 0)
+    {
+        this->length =another.length;
+        this->space = new int[this->length];//在堆上给space开辟内存
+    }
+    cout << "重载了=运算符" <<endl;
+    for(int i = 0; i < this->length; ++i)
+    {
+        this->space[i] = another.space[i];
+    }
+
+    return *this;
+}
+
+bool myArray::operator==(const myArray& another)
+{
+    if(this->length == another.length)
+    {
+        for(int i = 0; i < this->length; ++i)
+        {
+            if(this->space[i] != another.space[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
+bool myArray::operator!=(const myArray& another)
+{
+    return !(*this == another);
+}
+
+ostream& operator<<(ostream& os, const myArray& array)
+{
+    os << "遍历整个数组" << endl;
+    for(int i = 0; i < array.length; ++i)
+    {
+        os << array[i] << endl;//[]参数是非const，修改为const
+    }
+    return os;
+}
+
+istream& operator>>(istream& is, myArray& array)
+{
+    cout << "请输入" << array.length << "个数" << endl;
+    for(int i = 0; i < array.length; ++i)
+    {
+        is >> array[i];
+    }
+    return is;
+}
 
 

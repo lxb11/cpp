@@ -22,12 +22,28 @@ public:
 
     int getData(int index);
 
+    //重载操作符[]
+    int& operator[](int index) const;
+    
+    //显示提供一个=
+    myArray& operator=(const myArray& another);
+
+    //重载一个==
+    bool operator==(const myArray& another);
+
+    //重载一个！=
+    bool operator!=(const myArray& another);
+
     ~myArray();
+
+    friend ostream& operator<<(ostream& os, const myArray& array);
+    friend istream& operator>>(istream& is, myArray& array);
 
 private:
     int length;//数组目前的长度
     int *space;//apace是在对上开辟空间的首地址元素
-
-
 };
+
+ostream& operator<<(ostream& os, const myArray& array);
+istream& operator>>(istream& is, myArray& array);
 
