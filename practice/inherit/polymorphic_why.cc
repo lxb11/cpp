@@ -37,6 +37,7 @@ private:
     int b;
 };
 
+//可以用现在写的函数调用未来的函数------多态
 void myPrintFunc(Parent& p)
 {
     p.print();
