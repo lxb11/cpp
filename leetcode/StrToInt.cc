@@ -64,10 +64,10 @@ int StrToInt(const char* str)
 
 void test()
 {
-    char* str = "0";
-    char* str1 = "-1234";
-    char* str2 = "+1234";
-    char* str3 = "-1.2";
+    char str[] = "0";
+    char str1[] = "-1234";
+    char str2[] = "+1234";
+    char str3[] = "-1.2";
 
     cout << StrToInt(str) << endl;
     cout << StrToInt(str1) << endl;
