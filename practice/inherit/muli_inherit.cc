@@ -17,8 +17,8 @@ public:
         cout << "sleep" << endl;
     }
 };
-//如果子类虚继承本类，编译器会将父类中的成员，只拷贝一份
 
+//如果子类虚继承本类，编译器会将父类中的成员，只拷贝一份
 class Sofa:virtual public Furniture
 {
 public:
