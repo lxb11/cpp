@@ -14,6 +14,8 @@ public:
     //员工的升级方法
     virtual void uplevel(int addLevel);
 
+    virtual void init();
+
 protected:
 
     //当月的销售总额

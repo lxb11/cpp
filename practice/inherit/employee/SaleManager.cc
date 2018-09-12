@@ -4,12 +4,7 @@
 
 SaleManager::SaleManager()
 {
-    cout << "请输入销售经理的名字" << endl;
-    cin >> this->name;
-
-    this->fixSalary = 5000;
-    this->salePercent = 0.05;
-
+    cout << "SaleManager()" << endl;
 }
 
 SaleManager::~SaleManager()
@@ -32,4 +27,14 @@ void SaleManager::getPay()
 void SaleManager::uplevel(int addLevel)
 {
     this->level += addLevel;
+}
+
+void SaleManager::init()
+{
+    cout << "请输入销售经理的名字" << endl;
+    cin >> this->name;
+
+    this->fixSalary = 5000;
+    this->salePercent = 0.05;
+
 }

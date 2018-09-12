@@ -3,12 +3,7 @@
 
 Manager::Manager()
 {
-    cout << "请输入经理的姓名" << endl;
-    cin >> this->name;
-
-    //经历的固定薪水
-    this->fixSalary = 8000;
-
+    cout << "Manager()" << endl;
 }
 
 Manager::~Manager()
@@ -30,3 +25,11 @@ void Manager::uplevel(int addLevel)
 
 }
 
+void Manager::init()
+{
+    cout << "请输入经理的姓名" << endl;
+    cin >> this->name;
+
+    //经历的固定薪水
+    this->fixSalary = 8000;
+}

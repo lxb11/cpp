@@ -13,6 +13,8 @@ public:
     //员工的升级方法
     virtual void uplevel(int addLevel);
 
+    virtual void init();
+
 protected:
     double fixSalary;//固定薪水
 

@@ -13,6 +13,8 @@ public:
     //员工的升级方法
     virtual void uplevel(int addLevel);
 
+    virtual void init();
+
 private:
     double perHourMoney;//每小时赚多钱
     int workHour;//一个月工作多少小时

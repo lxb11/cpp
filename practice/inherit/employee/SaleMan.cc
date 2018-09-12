@@ -2,10 +2,7 @@
 
 SaleMan ::SaleMan()
 {
-    cout << "请输入销售人员的姓名" << endl;
-    cin >> this->name;
-
-    this->salePercent = 0.04;//按4%提成
+    cout << "SaleMan()" << endl;
 }
 
 SaleMan:: ~SaleMan()
@@ -29,3 +26,10 @@ SaleMan:: ~SaleMan()
     this->level += addLevel;
 }
 
+void SaleMan::init()
+{
+    cout << "请输入销售人员的姓名" << endl;
+    cin >> this->name;
+
+    this->salePercent = 0.04;//按4%提成
+}

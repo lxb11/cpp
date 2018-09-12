@@ -2,10 +2,7 @@
 
 Technician::Technician()
 {
-    cout << "请输入技术人员的name" << endl;
-    cin >> this->name;
-    this->perHourMoney = 100; //技术人员每小时赚100
-
+    cout << "Technician()" << endl;
 }
 Technician::~Technician()
 {
@@ -28,3 +25,9 @@ void Technician::uplevel(int addLevel)
     this->level += addLevel;
 }
 
+void Technician::init()
+{
+    cout << "请输入技术人员的name" << endl;
+    cin >> this->name;
+    this->perHourMoney = 100; //技术人员每小时赚100
+}
