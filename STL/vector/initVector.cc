@@ -71,10 +71,44 @@ void test1()
 
 }
 
+//赋值操作
+void test2()
+{
+    vector<int> v1;
+    v1.assign(5, 1);
+    printVector(v1);
+
+    vector<int> v2;
+    v2.assign(v1.begin(), v1.end());
+    printVector(v2);
+
+    vector<int> v3;
+    v3 = v1;
+    printVector(v3);
+
+}
+
+//插入
+void test3()
+{
+    int arr[] = {6,7,8,9};
+    vector<int> v(arr, arr + sizeof(arr) / sizeof(int));
+    v.insert(v.begin(), 100);
+    printVector(v);
+    v.insert(v.end(), 100);
+    printVector(v);
+}
+
 int main()
 {
+    cout << "-----------test0---------" << endl;
     test0();
+    cout << "-----------test1---------" << endl;
     test1();
+    cout << "-----------test2---------" << endl;
+    test2();
+    cout << "-----------test3---------" << endl;
+    test3();
     return 0;
 }
 
