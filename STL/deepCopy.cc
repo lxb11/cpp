@@ -16,6 +16,35 @@ public:
         this->age = age;
     }
 
+    Teacher(const Teacher& another)
+    {
+        if(another.name != NULL)
+        {
+            int len = strlen(another.name);
+            this->name = new char[len + 1];
+            strcpy(this->name, another.name);
+        }
+        this->age = another.age;
+    }
+
+    Teacher& operator=(const Teacher& another)
+    {
+        if(this->name != NULL)
+        {
+            delete[] this->name;
+        }
+
+        if(another.name != NULL)
+        {
+            int len = strlen(another.name);
+            this->name = new char[len + 1];
+            strcpy(this->name, another.name);
+        }
+        this->age = another.age;
+
+        return *this;
+    }
+
     ~Teacher()
     {
         if(this->name != NULL)
