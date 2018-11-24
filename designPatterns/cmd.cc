@@ -112,7 +112,7 @@ public:
     {
         for(list<Command*>::iterator it = m_list.begin(); it != m_list.end(); ++it)
         {
-            (*it)->treat();
+            (*it)->treat();//会发生多态
         }
     }
 private:
